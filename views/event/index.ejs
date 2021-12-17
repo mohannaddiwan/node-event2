@@ -1,0 +1,31 @@
+
+    <%- include("../partials/header.ejs") -%>
+    <%- include("../partials/navbar.ejs") -%>
+    
+
+<div></div>
+
+<div class="container">
+
+  <%- include("../partials/flashMsg.ejs") -%>
+
+
+  <% chunk.forEach((events)=> { %>
+    <div class="row">
+      <% events.forEach((event)=> { %>
+        <div class="col-sm-6 col-md-4 mt-3">
+          <div class="card card-style">
+            <div class="card-body" style="height: 300px;">
+              <h4 class="card-title text-center title-style" ><%= event.title %></h4>
+              <p class="card-text my-4 text-style"><%= event.description %></p>
+              <!-- <p class="card-text "><%= event.location %></p> -->
+              <a href="<%= '/events/show/' + event.id %>" class="btn btn-secondary px-4">Click</a>
+            </div>
+          </div> 
+        </div>
+        <% }) %>
+    </div>
+    <% }) %>
+
+  
+<%- include("../partials/footer.ejs") -%>

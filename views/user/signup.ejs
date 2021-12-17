@@ -1,0 +1,38 @@
+
+    <%- include("../partials/header.ejs") -%>
+    <%- include("../partials/navbar.ejs") -%>
+
+    <div class="container">
+       
+        <div class="row mt-3">
+            <div class="col-md-6 offset-md-3">
+                <h1>Signup</h1>
+                <hr>
+                <%- include("../partials/flashMsg.ejs") -%>
+                <form  action="/users/signup" method="post">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="confirm_password" class="form-control">
+                    </div>
+    
+    
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"> Signup</button>
+                        </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <%- include("../partials/footer.ejs") -%>
+     
